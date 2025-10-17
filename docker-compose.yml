@@ -1,0 +1,15 @@
+# docker-compose.yml
+# This is the "run" version of the file for your friend.
+version: '3'
+
+services:
+  web:
+    # This line is changed:
+    # Instead of building from a Dockerfile, it pulls the image from Docker Hub.
+    image: "your-username/visit-counter:latest" # <-- !!! CHANGE THIS LINE !!!
+    ports:
+      - "5000:5000"
+      
+  redis:
+    # This service is the same, it pulls the official Redis image.
+    image: "redis:alpine"
